@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #5e4ae3;
+
+    --shadow-color: #bfbfbf;
+
+    --bg-logo: #DEDEDE;
+
+    --primary-bg-color: #EBEDF2;
+
+    --primary-text-color: #050505;
+
+    --border-radius: 5rem;
+
+    --warn-color: #F6C81A;
+    --white-color: #fff;
+
+    --bg-button-info: #3C337D;
+    --bg-button-danger: #E82D79;
+    --bg-button-cat: #D5D6DA;
+
+    --bg-menu-hover: #F2F0FF;
+
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    height: 100vh;
+    width: 80%;
+    background: var(--primary-bg-color);
+    margin: 0 auto;
+    box-shadow: .1rem .1rem .2rem .1rem var(--shadow-color);
+}
+
+.container #header{
+    height: 7rem;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* padronizando os ícones e as imgs no header */
+.container #header i {
+    font-size: 3.5rem;
+    color: var(bg-logo);
+}
+.container #header img {
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+.container #header .header-l{
+   width: 50%;
+   display: flex;
+   align-items: center;
+}
+.container #header .header-l div{
+    display: flex;
+    align-items: center;
+    width: 8.5rem;
+    height: 100%;
+    margin-right: 5rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 1.5rem;
+    position: relative;
+    background: var(--bg-logo);
+}
+
+.container #header .header-l .ball-align{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .1rem .3rem .5rem .2rem var(--shadow-color);
+    background: #fff;
+    position: absolute;
+    left: 7rem;
+    color: rgb(90, 90, 90)
+}
+/* normalizando o ícone só */
+.container #header .header-l  i{
+    font-size: 2.5rem;
+    color: #757070;
+}
+
+.container #header .header-l input{
+    width: 40rem;
+    margin-left: 2rem;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+}
+
+.container #header .header-r{
+    display: flex;
+    align-items: center;
+    margin: 3rem;
+}
+
+.container #header .header-r div, i{
+    margin: .7rem;
+}
+
+.container #header .header-r .option{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.container #header .header-r .option > select{
+    border: none;
+}
+
+/* fazendo o sino com uma "notificação" */
+.container #header .header-r .bell{
+    position: relative;
+}
+.container #header .header-r .bell > div{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background: var(--warn-color);
+    color: var(--white-color);
+    top: -.5rem;
+    right: -.1rem;
+}
+
+
+.container #nav{
+    background: var(--primary-bg-color);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+.container #nav .nav-l{
+    display: flex;
+    align-items: center;
+}
+
+.container #nav .nav-l > i {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.container #nav .nav-l > h3 {
+    margin-left: -1rem;
+    margin-right: 4rem;
+}
+.container #nav .nav-l > h3 span {
+    color: #afaaaa;
+}
+
+.container #nav .nav-r button {
+    color: var(--white-color);
+    height: 3rem;
+    width: 10rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .1rem var(--shadow-color);
+    
+}
+.container #nav .nav-r button i {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    
+}
+.container #nav .nav-r #import{
+    background: var(--bg-button-info);
+}
+.container #nav .nav-r #export{
+    background: var(--bg-button-danger);
+}
+.container #nav .nav-r #cattegory{
+    background: var(--bg-button-cat);
+    color: #000;
+    width: 11rem;
+}
+
+
+
+.content{
+    width: 100%;
+    height: calc(100vh - 13.1rem);
+    display: flex;
+}
+
+.container .content #aside{
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.container #aside .menu-l{
+    display: flex;
+    flex-direction: column;
+    width: 6.5rem;
+    height: 80%;
+    border-top-right-radius: 2.75rem;
+    border-bottom-right-radius: 2.75rem;
+    background: #4f3fc9f8;
+    padding: .5rem;
+}
+
+.container #aside .menu-l i{
+    text-align: center;
+    color: #ece3e3f5;
+    font-size: 2.5rem;
+    margin: auto .75rem;
+    font-weight: 100;
+}
+
+.container #aside .menu-l #msgicon{
+    position: relative;
+}
+.container #aside .menu-l .numeromsg{
+    position: absolute;
+    bottom: 1.75rem;
+    left: 2rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: rgb(240, 161, 51);
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container #aside .onlineavatar{
+    height: 4rem;
+    width: 6.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-left: .5rem;
+}
+.container #aside .onlineavatar img{
+    width: 4rem;
+    border-radius: 50%;
+}
+.container #aside .onlineavatar .verdinho{
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    border: solid .15rem #fff;
+    background-color: rgb(30, 255, 0);
+    position: absolute;
+    right: .75rem;
+    bottom: .25rem;
+}
+
+.container #aside .onlineavatar .username{
+    font-weight: 600;
+    font-size: .85rem;
+    margin-top: .2rem;
+}
+
+.container .content #sec1{
+    height: 100%;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content #sec1 .filemanager{
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+}
+.container .content #sec1 .menu-r{
+    height: fit-content;
+    color: #050505a7;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.container .content #sec1 .menu-r .icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.container .content #sec1 .menu-r .icon i:hover{
+    background-color: var(--bg-menu-hover);
+    color: #594ea5;
+}
+.container .content #sec1 .menu-r i{
+    width: 18rem;
+    height: 2.25rem;
+    font-size: 2rem;
+}
+
+.container .content #sec1 .menu-r span{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+}
+
+.container .content #sec1 .menu-r .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.container .content #sec1 .menu-r button{
+    width: 10rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: .2rem .2rem .2rem var(--shadow-color);
+}
+
+.container .content #sec1 .menu-r .buttons .bupload{
+    background: var(--primary-color);
+    color: var(--white-color);
+    margin-right: 2rem;
+}
+.container .content #sec1 .menu-r .buttons .bcreate{
+    border: .1rem solid var(--primary-color);
+    color: var(--primary-color);
+    background: var(--white-color)
+}
+
+.container .content #sec1 .menu-r .tracejado{
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.166);
+}
+
+.container .content #sec1 .menu-r .footersec{
+    display: flex;
+    margin-top: .5rem;
+}
+.container .content #sec1 .menu-r .footersec .storage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.container .content #sec1 .menu-r .footersec .storage > div{
+    height: 2.5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    background-color: var(--bg-button-cat);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.container .content #sec1 .menu-r .footersec .storage i{
+    width: 2rem;
+    margin: 0;
+}
+.container .content #sec1 .menu-r .footersec .storage a{
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.container .content #sec1 .menu-r img{
+    margin-left: -1rem;
+    width: 10rem;
+}
+
+.container .content #sec1 .menu-r .bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.container .content #sec1 .menu-r .bar img{
+    margin: .25rem 0;
+    width: 100%;
+    height: .5rem;
+}
+.container .content #sec1 .menu-r .used p{
+    color: var(--shadow-color);
+}
+
+.container .content #sec1 .upgradeplan{
+    width: 100%;
+    height: 9rem;
+    background: var(--bg-button-info);
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .1rem var(--shadow-color);
+    padding: 1rem;
+    color: var(--white-color);
+}
+
+.container .content #sec1 .upgradeplan h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.container .content #sec1 .upgradeplan h4 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: .5rem;
+    color: var(--shadow-color);
+    margin-bottom: 1rem;
+}
+    
+.container .content #sec1 .upgradeplan h3{
+    color: #f1a40f;
+    font-size: 1.3rem;
+}
+
+
+main{
+    height: 100%;
+    width: calc(100vw - 40rem);
+    background: var(--primary-bg-color);
+    border: .2rem solid red;
+}
+
+.container .content main .linkcanto{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    text-decoration: underline blue;
+    color: var(--primary-color);
+}
+
+.container .content main .topoptions{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.container .content main .topoptions .opt1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .content main .topoptions .opt1 .dentro{
+    background: #FBD1E4;
+    width: 15rem;
+    height: 10rem;
+    border-radius: .8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content main .topoptions .opt1 .dentro  .img-f {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content main .topoptions .opt1 .dentro .img-f i {
+    font-size: 3rem;
+}
+
+.container .content main .opt1 .dentro .img-f {
+    background: linear-gradient(#F8ADCF, #ffc9e1);
+    color: #fc84ba;
+}
+
+.container .content main .opt1 .dentro i {
+    font-size: 1rem;
+    position: absolute;
+}
+
+.container .content main .opt1 .dentro > i:nth-child(1) {
+    bottom: .5rem;
+    left: .5rem;
+    color: var(--white-color);
+    font-size: 1.3rem;
+}
+.container .content main .opt1 .dentro > i:nth-child(2){
+    top: .1rem;
+    right: .1rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+
+
